@@ -6,9 +6,9 @@
 
 def countdown(num):
     for i in range (-num, 0):
-    print (-i)
-    if i == -1:
-        print ("BOOOM! GOT 'EM")
+        print (-i)
+        if i == -1:
+          print ("BOOOM! GOT 'EM")
         
 q = int(input("Enter a number: "))
 
