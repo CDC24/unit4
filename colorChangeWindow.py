@@ -3,8 +3,6 @@
 #colorChangeWindow.py - uses functions to reprint strings vertically
 
 from ggame import *
-#the asterisk imports the whole thing
-
 
 red = Color(0xFF0000,1) # (RGB code, opacity)
 green = Color(0x00FF00,1)
