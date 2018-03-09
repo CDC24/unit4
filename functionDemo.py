@@ -23,7 +23,7 @@ double("w")
 double(False)
 double(True)
 """
-
+"""
 def bigger(a,b):
     if a>b:
         print (a)
@@ -31,3 +31,22 @@ def bigger(a,b):
         print (b)
     else:
         print ("aaaaaaa")
+
+bigger(6,2)
+"""
+
+def slope(x1,y1,x2,y2):
+    print ((y2-y1)/(x2-x1))
+    
+slope (1,1,2,2)
+
+
+
+
+
+
+
+
+
+
+
