@@ -1,3 +1,9 @@
 #Caleb Callaway
 #3/9/18
-#retangle.py - uses functins to rectangulize
+#retangle.py - uses functions to rectangulize
+
+
+def rectangle(l,w):
+    print("perimeter is", 2*l+2*w)
+    print("area is", l*w)
+    
