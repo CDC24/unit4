@@ -10,4 +10,10 @@ def hw():
     print ("Hello World")
 
 #to use the fnctn:
-hw()
+#hw()
+
+
+def double(thingToDouble):
+    print(thingToDouble*2)
+    
+double(12)
