@@ -16,4 +16,6 @@ def hw():
 def double(thingToDouble):
     print(thingToDouble*2)
     
-double(12)
+double(156)
+double("w")
+double(False)
