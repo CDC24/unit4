@@ -7,6 +7,6 @@ def printStars(e):
     for i in range(1,  e+1):
        print (" "*(e-i)," *"*i)
        
-e = int(input("Enter a number "))
+e = int(input("Enter a number: "))
 
 printStars(e)
