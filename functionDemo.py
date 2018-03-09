@@ -8,3 +8,6 @@
 #define a new functions
 def hw():
     print ("Hello World")
+
+#to use the fnctn:
+hw()
