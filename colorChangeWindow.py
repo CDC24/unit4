@@ -13,7 +13,7 @@ black = Color(0X00000000,1)
 def randcol():
     gnum = randint (1,4)
     if gnum == 1:
-        return (Color(0xFF0000,1))
+        return (red)
     elif gnum == 2:
         return (Color(0x00FF00,1))
     elif gnum == 3:
