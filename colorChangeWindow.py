@@ -22,7 +22,9 @@ def randcol():
         return (Color(0X00000000,1))
 
 
-blackOutline = LineStyle(0,black)
+randcol(0)
+
+blackOutline = LineStyle(1,black)
 redRectangle = RectangleAsset(1500,1000, blackOutline, randcol)
 
 
