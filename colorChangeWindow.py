@@ -13,13 +13,13 @@ black = Color(0X00000000,1)
 def randcol():
     gnum = randint (1,4)
     if gnum == 1:
-        return (red)
+        return (Color(0xFF0000,1))
     elif gnum == 2:
-        return (green)
+        return (Color(0x00FF00,1))
     elif gnum == 3:
-        return (blue)
+        return (Color(0x0000FF,1))
     elif gnum == 4:
-        return (black)
+        return (Color(0X00000000,1))
 
 
 blackOutline = LineStyle(0,black)
