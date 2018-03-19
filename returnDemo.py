@@ -10,7 +10,7 @@ def randEven(low,high):
     n=randint(low,high)
     while n%2 != 0:
         n = randint (low,high)
-    return (n)                        #return replaces print
+    return (n)                        #return replaces print and stores answer for later
     
 print ("the numbers are", randEven(0,100), randEven(0,100), randEven(0,100)) #test
 
