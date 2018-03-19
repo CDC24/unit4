@@ -8,7 +8,7 @@ from random import randint
 
 def randEven(low,high):
     n=randint(low,high)
-    while n%2 !=2:
+    while n%2 != 0:
         n = randint (low,high)
     print (n)
     
