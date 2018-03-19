@@ -25,10 +25,10 @@ def randcol():
 col = randcol()
 
 blackOutline = LineStyle(1,black)
-redRectangle = RectangleAsset(1500,1000, blackOutline, col)
+theRectangle = RectangleAsset(1500,1000, blackOutline, col)
 
 
-Sprite(redRectangle)
+Sprite(theRectangle)
 
 App().listenMouseEvent("click",mouseClick)
 App().run()
