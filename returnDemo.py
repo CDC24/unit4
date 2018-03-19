@@ -12,7 +12,7 @@ def randEven(low,high):
         n = randint (low,high)
     print (n)
     
-randEven(10,20) #test
+print ("the numbers are", randEven(0,100), randEven(0,100), randEven(0,100) #test
 
 
 # print (randint(low/2,high/2)*2)       dun't really work
