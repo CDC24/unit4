@@ -3,17 +3,30 @@
 #colorChangeWindow.py - uses functions to reprint strings vertically
 
 from ggame import *
+from random import randint
 
 red = Color(0xFF0000,1)
 green = Color(0x00FF00,1)
 blue = Color(0x0000FF,1)
 black = Color(0X00000000,1)
 
+def randcol:
+    randint (1,4)
+    if randint == 1:
+        return (red)
+    elif randint == 2:
+        return (green)
+    elif randint == 3:
+        return (blue)
+    elif randint == 4:
+        return (black)
+
+
 blackOutline = LineStyle(1,black)
-redRectangle = RectangleAsset(1000,1000, blackOutline, red)
+redRectangle = RectangleAsset(1500,1000, blackOutline, randcol)
 
 
 Sprite(redRectangle)
 
-
+App().listenMouseEvent("click",mouseClick)
 App().run()
