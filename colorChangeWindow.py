@@ -10,7 +10,7 @@ green = Color(0x00FF00,1)
 blue = Color(0x0000FF,1)
 black = Color(0X00000000,1)
 
-def randcol:
+def randcol():
     randint (1,4)
     if randint == 1:
         return (red)
@@ -22,7 +22,7 @@ def randcol:
         return (black)
 
 
-blackOutline = LineStyle(1,black)
+blackOutline = LineStyle(0,black)
 redRectangle = RectangleAsset(1500,1000, blackOutline, randcol)
 
 
