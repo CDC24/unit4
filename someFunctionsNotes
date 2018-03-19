@@ -1,0 +1,31 @@
+"""
+Some Functions Notes
+
+
+Writing yer own
+
+def functionName(a,b,c,...):          a,b,c are placeholders for input
+  <<what the function does>>
+  return value (optional)             if you need to use an answer later
+
+
+examples in Python:
+max( , )
+min( , )
+.upper( , )
+.lower( , )
+print()
+randint( , )
+str()
+int()
+float()
+range( , )
+len()
+    ggame:
+    CircleAsset()
+    App.run()
+    Sprite()
+input()
+split()
+.count()
+"""
