@@ -15,11 +15,11 @@ def randcol():
     if gnum == 1:
         return (red)
     elif gnum == 2:
-        return (Color(0x00FF00,1))
+        return (green)
     elif gnum == 3:
-        return (Color(0x0000FF,1))
+        return (blue)
     elif gnum == 4:
-        return (Color(0X00000000,1))
+        return (black)
 
 
 col = randcol()
