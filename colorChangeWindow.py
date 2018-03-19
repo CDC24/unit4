@@ -13,9 +13,9 @@ black = Color(0X00000000,1)
 def randcol():
     gnum = randint (1,4)
     if gnum == 1:
-        return (red)
-    elif gnum == 2:
         return (green)
+    elif gnum == 2:
+        return (red)
     elif gnum == 3:
         return (blue)
     elif gnum == 4:
