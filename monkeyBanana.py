@@ -14,6 +14,15 @@ CELLSIZE = 20
 
 def moveRight(event):
     monkey.x += CELLSIZE
+    
+def moveLeft(event):
+    monkey.x -= CELLSIZE
+    
+def moveDown(event):
+    monkey.y -= CELLSIZE
+    
+def moveUp(event):
+    monkey.y += CELLSIZE
 
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
@@ -30,4 +39,7 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     monkey = Sprite(monkeyBody)
     
     App().listenKeyEvent('keydown','right arrow', moveRight)
+    App().listenKeyEvent('keydown','left arrow', moveLeft)
+    App().listenKeyEvent('keydown','down arrow', moveDown)
+    App().listenKeyEvent('keydown','up arrow', moveUp)
     App().run()
