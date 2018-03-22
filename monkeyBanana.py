@@ -18,24 +18,28 @@ def moveRight(event):
         monkey.x += CELLSIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
+            data["score"]+= 3.14159
     
 def moveLeft(event):
     if monkey.x>0:
         monkey.x -= CELLSIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
+            data["score"]+= 3.14159
     
 def moveDown(event):
     if monkey.y < (ROWS-1)*CELLSIZE:
         monkey.y += CELLSIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
+            data["score"]+= 3.14159
     
 def moveUp(event):
     if monkey.y>0:
         monkey.y -= CELLSIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
+            data["score"]+= 3.14159
     
 def moveBanana():
     banana.x = randint(0,COLS-1)*CELLSIZE
@@ -43,14 +47,20 @@ def moveBanana():
 
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
+#hold variables in a dictionary
+data = {}
+data["score"] = 0
 
-    green = Color(0x000660,1)
+
+    green = Color(0x006600,1)
     brown = Color(0x8B4513,1)
     yellow = Color(0XFFFF00,1)
+    red = Color(0xFF0000,1)
+    black = Color(0X00000000,1)
 
-    jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,green),green)
+    jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,black),black)
     monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,brown),brown)
-    bananaBox = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(2,brown),yellow)
+    bananaBox = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(2,red),yellow)
     
     Sprite(jungleBox)
     banana = Sprite(bananaBox,(CELLSIZE*COLS/2,CELLSIZE*ROWS/2))
