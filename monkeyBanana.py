@@ -19,10 +19,10 @@ def moveLeft(event):
     monkey.x -= CELLSIZE
     
 def moveDown(event):
-    monkey.y -= CELLSIZE
+    monkey.y += CELLSIZE
     
 def moveUp(event):
-    monkey.y += CELLSIZE
+    monkey.y -= CELLSIZE
 
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
