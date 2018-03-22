@@ -6,6 +6,12 @@
 
 from ggame import *
 
+#constants:
+ROWS = 20
+COLS = 40
+CELLSIZE = 20
+
+
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
 
@@ -13,7 +19,7 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     brown = Color(0x0000FF,1)
     yellow = Color(0X00000000,1)
 
-    jungleBox = RectangleAsset(1500,1500,LineStyle(1,green),green)
+    jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,green),green)
 
     Sprite(jungleBox)
 
