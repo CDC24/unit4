@@ -32,7 +32,7 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     yellow = Color(0XFFFF00,1)
 
     jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,green),green)
-    monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,brown),brown)
+    monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,yellow),yellow)
 
 
     Sprite(jungleBox)
