@@ -7,8 +7,8 @@
 from ggame import *
 
 #constants:
-ROWS = 40
-COLS = 80
+ROWS = 30
+COLS = 70
 CELLSIZE = 20
 
 
