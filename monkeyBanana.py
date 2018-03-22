@@ -7,9 +7,9 @@
 from ggame import *
 
 #constants:
-ROWS = 30
-COLS = 70
-CELLSIZE = 20
+ROWS = 300
+COLS = 700
+CELLSIZE = 5
 
 
 def moveRight(event):
@@ -29,7 +29,7 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
 
     green = Color(0x000660,1)
     brown = Color(0x8B4513,1)
-    yellow = Color(0X00000000,1)
+    yellow = Color(0XFFFF00,1)
 
     jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,green),green)
     monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,brown),brown)
