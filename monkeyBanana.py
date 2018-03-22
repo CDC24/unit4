@@ -7,9 +7,9 @@
 from ggame import *
 
 #constants:
-ROWS = 300
-COLS = 700
-CELLSIZE = 5
+ROWS = 30
+COLS = 70
+CELLSIZE = 20
 
 
 def moveRight(event):
@@ -32,11 +32,12 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     yellow = Color(0XFFFF00,1)
 
     jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,green),green)
-    monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,yellow),yellow)
-
-
+    monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,brown),brown)
+    bananaBox = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(2,brown),yellow)
+    
     Sprite(jungleBox)
     monkey = Sprite(monkeyBody)
+    banana = Sprite(bananaBox(CELLSIZE*COLS/2,CELLSIZE*ROWS/2,)
     
     App().listenKeyEvent('keydown','right arrow', moveRight)
     App().listenKeyEvent('keydown','left arrow', moveLeft)
