@@ -5,26 +5,37 @@
 
 
 from ggame import *
+from random import randint
 
 #constants:
-ROWS = 30
-COLS = 70
-CELLSIZE = 20
+ROWS = 50
+COLS = 40
+CELLSIZE = 10
 
 
 def moveRight(event):
     monkey.x += CELLSIZE
-        if monkey.x == banana.x and monkey.y == banana.y:
-            print("good")
+    if monkey.x == banana.x and monkey.y == banana.y:
+        moveBanana()
     
 def moveLeft(event):
     monkey.x -= CELLSIZE
+    if monkey.x == banana.x and monkey.y == banana.y:
+        moveBanana()
     
 def moveDown(event):
     monkey.y += CELLSIZE
+    if monkey.x == banana.x and monkey.y == banana.y:
+        moveBanana()
     
 def moveUp(event):
     monkey.y -= CELLSIZE
+    if monkey.x == banana.x and monkey.y == banana.y:
+        moveBanana()
+    
+def moveBanana():
+    banana.x = randint(0,COLS-1)*CELLSIZE
+    banana.y = randint(0,ROWS-1)*CELLSIZE
 
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
@@ -38,7 +49,7 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     bananaBox = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(2,brown),yellow)
     
     Sprite(jungleBox)
-    banana = Sprite(bananaBox(CELLSIZE*COLS/2,CELLSIZE*ROWS/2))
+    banana = Sprite(bananaBox,(CELLSIZE*COLS/2,CELLSIZE*ROWS/2))
     monkey = Sprite(monkeyBody)
      
     App().listenKeyEvent('keydown','right arrow', moveRight)
