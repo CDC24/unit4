@@ -14,24 +14,28 @@ CELLSIZE = 10
 
 
 def moveRight(event):
-    monkey.x += CELLSIZE
-    if monkey.x == banana.x and monkey.y == banana.y:
-        moveBanana()
+    if monkey.x < (COLS-1)*CELLSIZE:
+        monkey.x += CELLSIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
     
 def moveLeft(event):
-    monkey.x -= CELLSIZE
-    if monkey.x == banana.x and monkey.y == banana.y:
-        moveBanana()
+    if monkey.x>0:
+        monkey.x -= CELLSIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
     
 def moveDown(event):
-    monkey.y += CELLSIZE
-    if monkey.x == banana.x and monkey.y == banana.y:
-        moveBanana()
+    if monkey.y < (ROWS-1)*CELLSIZE:
+        monkey.y += CELLSIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
     
 def moveUp(event):
-    monkey.y -= CELLSIZE
-    if monkey.x == banana.x and monkey.y == banana.y:
-        moveBanana()
+    if monkey.y>0:
+        monkey.y -= CELLSIZE
+        if monkey.x == banana.x and monkey.y == banana.y:
+            moveBanana()
     
 def moveBanana():
     banana.x = randint(0,COLS-1)*CELLSIZE
