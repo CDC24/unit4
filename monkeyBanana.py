@@ -62,13 +62,15 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     red = Color(0xFF0000,1)
     black = Color(0X00000000,1)
 
-    jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,black),black)
+    jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,green),green)
     monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,brown),brown)
     bananaBox = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(2,red),yellow)
+    scoreBoard = TextAsset("Score = 0")
     
     Sprite(jungleBox)
     banana = Sprite(bananaBox,(CELLSIZE*COLS/2,CELLSIZE*ROWS/2))
     monkey = Sprite(monkeyBody)
+    sprite(scoreBoard, (10,CELLSIZE*ROWS - 50))
      
     App().listenKeyEvent('keydown','right arrow', moveRight)
     App().listenKeyEvent('keydown','left arrow', moveLeft)
