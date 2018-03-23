@@ -50,10 +50,11 @@ def updateScore():
     data["scoreText"].destroy()                             #remove old writing
     scoreBoard = TextAsset ("Score ="+str(data["score"]))
     data["scoreText"] = Sprite(scoreBoard, (CELLSIZE*COLS - 150,10))
+    data["frames"] = 0
 
 def step():
     data["frames"] += 1
-    if data["frames"]%300 == 0:
+    if data["frames"]%400 == 0:
         moveBanana()
 
 
