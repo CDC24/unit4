@@ -70,7 +70,7 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     Sprite(jungleBox)
     banana = Sprite(bananaBox,(CELLSIZE*COLS/2,CELLSIZE*ROWS/2))
     monkey = Sprite(monkeyBody)
-    sprite(scoreBoard, (10,CELLSIZE*ROWS - 50))
+    Sprite(scoreBoard, (CELLSIZE*ROWS - 50,10))
      
     App().listenKeyEvent('keydown','right arrow', moveRight)
     App().listenKeyEvent('keydown','left arrow', moveLeft)
