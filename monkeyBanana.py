@@ -9,7 +9,7 @@ from random import randint
 
 #constants:
 ROWS = 50
-COLS = 40
+COLS = 100
 CELLSIZE = 10
 
 
@@ -47,15 +47,23 @@ def moveBanana():
     
 def updateScore():
     data["score"]+=10
-    data["scoreText"].destroy() #remove old writing
-    scoreBox = TextAsset ("Score =",str(data["score"]))
+    data["scoreText"].destroy()                             #remove old writing
+    scoreBoard = TextAsset ("Score ="+str(data["score"]))
     data["scoreText"] = Sprite(scoreBoard, (CELLSIZE*COLS - 150,10))
+
+def step():
+    data["frames"] += 1
+    if data["frames"]%300 == 0:
+        moveBanana()
+
+
 
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
 #hold variables in a dictionary
     data = {}
     data["score"] = 0
+    data["frames"] = 0
 
 
     green = Color(0x006600,1)
@@ -78,4 +86,21 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     App().listenKeyEvent('keydown','left arrow', moveLeft)
     App().listenKeyEvent('keydown','down arrow', moveDown)
     App().listenKeyEvent('keydown','up arrow', moveUp)
-    App().run()
+    App().run(step)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
