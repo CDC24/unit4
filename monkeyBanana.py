@@ -12,14 +12,15 @@ ROWS = 50
 COLS = 100
 CELLSIZE = 10
 
-
+# moves monkey 1 cell right if possible
 def moveRight(event):
     if monkey.x < (COLS-1)*CELLSIZE:
         monkey.x += CELLSIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
             updateScore()
-    
+  
+  # moves monkey 1 cell left if possible  
 def moveLeft(event):
     if monkey.x>0:
         monkey.x -= CELLSIZE
@@ -27,13 +28,15 @@ def moveLeft(event):
             moveBanana()
             updateScore()
     
+# moves monkey 1 cell down if possible
 def moveDown(event):
     if monkey.y < (ROWS-1)*CELLSIZE:
         monkey.y += CELLSIZE
         if monkey.x == banana.x and monkey.y == banana.y:
             moveBanana()
             updateScore()
-    
+            
+# moves monkey 1 cell up if possible
 def moveUp(event):
     if monkey.y>0:
         monkey.y -= CELLSIZE
@@ -41,10 +44,18 @@ def moveUp(event):
             moveBanana()
             updateScore()
     
+# moves banana randomly within constraints
 def moveBanana():
     banana.x = randint(0,COLS-1)*CELLSIZE
     banana.y = randint(0,ROWS-1)*CELLSIZE
     
+# keeps track of how many frames have happened, runs moveBanana at regular intervals
+def step():
+    data["frames"] += 1
+    if data["frames"]%300 == 0:
+        moveBanana()    
+    
+# increase score and display new text at top right screen, resets timer
 def updateScore():
     data["score"]+=10
     data["scoreText"].destroy()                             #remove old writing
@@ -52,16 +63,13 @@ def updateScore():
     data["scoreText"] = Sprite(scoreBoard, (CELLSIZE*COLS - 150,10))
     data["frames"] = 0
 
-def step():
-    data["frames"] += 1
-    if data["frames"]%400 == 0:
-        moveBanana()
 
 
 
+#sets up and runs game
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
-#hold variables in a dictionary
+#holds variables in a dictionary
     data = {}
     data["score"] = 0
     data["frames"] = 0
@@ -73,6 +81,8 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     red = Color(0xFF0000,1)
     black = Color(0X00000000,1)
 
+
+#graphics
     jungleBox = RectangleAsset(CELLSIZE*COLS,CELLSIZE*ROWS,LineStyle(1,green),green)
     monkeyBody = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(1,brown),brown)
     bananaBox = RectangleAsset(CELLSIZE,CELLSIZE,LineStyle(2,red),yellow)
