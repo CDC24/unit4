@@ -47,7 +47,9 @@ def moveBanana():
     
 def updateScore():
     data["score"]+=10
-    print(data["score"])
+    data["scoreText"].destroy() #remove old writing
+    scoreBox = TextAsset ("Score =",str(data["score"]))
+    data["scoreText"] = Sprite(scoreBoard, (CELLSIZE*COLS - 150,10))
 
 if __name__ == "__main__":       #those are 2 underscores not 1      this is so u can run the main part by itself
 
@@ -70,7 +72,7 @@ if __name__ == "__main__":       #those are 2 underscores not 1      this is so 
     Sprite(jungleBox)
     banana = Sprite(bananaBox,(CELLSIZE*COLS/2,CELLSIZE*ROWS/2))
     monkey = Sprite(monkeyBody)
-    Sprite(scoreBoard, (CELLSIZE*COLS - 50,10))
+    data["scoreText"] = Sprite(scoreBoard, (CELLSIZE*COLS - 150,10))
      
     App().listenKeyEvent('keydown','right arrow', moveRight)
     App().listenKeyEvent('keydown','left arrow', moveLeft)
