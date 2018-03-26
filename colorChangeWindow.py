@@ -1,6 +1,6 @@
 #Caleb Callaway
 #3/9/18
-#colorChangeWindow.py - uses functions to reprint strings vertically
+#colorChangeWindow.py - changes each time you click
 
 from ggame import *
 from random import randint
