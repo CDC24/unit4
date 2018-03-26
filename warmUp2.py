@@ -6,13 +6,15 @@
 
 
 def prime(num):
-    for i in range (2, num-1):
-    if num%i==0:
-        print (False)
-        
-        
-        
-        
+    for i in range (2, num):
+        if num%i==0:
+            return (False)
+        else:
+            return(True)
+
+    
+    
+    
 num = int(input("Enter a number: "))
 
 print (prime(num))
