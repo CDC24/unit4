@@ -5,30 +5,28 @@
 from ggame import *
 from random import randint
 
-red = Color(0xFF0000,1)
-green = Color(0x00FF00,1)
-blue = Color(0x0000FF,1)
-black = Color(0X00000000,1)
-
-def randcol():
+def randcol(event):
     gnum = randint (1,4)
     if gnum == 1:
-        return (green)
+        col = Color(0x00FF00,1)
     elif gnum == 2:
-        return (red)
+        col = Color(0xFF0000,1)
     elif gnum == 3:
-        return (blue)
+        col =  Color(0x0000FF,1)
     elif gnum == 4:
-        return (black)
+        col = Color(0X00000000,1)
+    theRectangle = RectangleAsset(1500,1000,LineStyle(1,col),col)
+    Sprite(theRectangle)
 
 
-col = randcol()
 
-blackOutline = LineStyle(1,black)
-theRectangle = RectangleAsset(1500,1000, blackOutline, col)
-
-
-Sprite(theRectangle)
-
-App().listenMouseEvent("click",mouseClick)
+App().listenMouseEvent("click",randcol)
 App().run()
+
+
+
+
+
+
+
+
