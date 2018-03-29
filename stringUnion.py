@@ -12,4 +12,4 @@ def stringUnion(word1,word2):
     return(newword)
             
             
-print(stringUnion(Mississippi,Pensylvania))
+print(stringUnion("Mississippi","Pensylvania"))
