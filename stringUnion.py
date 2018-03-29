@@ -7,8 +7,8 @@ def stringUnion(word1,word2):
     twoword=(word1+word2)
     newword=("")
     for ch in twoword:
-        if ch not in newword:
-            newword +=(ch)
+        if ch.lower() not in newword.lower():
+            newword +=(ch.lower())
     return(newword)
             
             
