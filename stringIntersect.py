@@ -1,5 +1,5 @@
 #Caleb Callaway
-#3/28/18
+#3/29/18
 #stringIntersect.py - prints the letters appearing in both of two words
 
 def stringIntersect(word1,word2):
