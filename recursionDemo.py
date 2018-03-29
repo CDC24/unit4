@@ -6,9 +6,9 @@
 def countdownr(n):
     if n == 0:                 # establishes 'base case'
         print("KERCHOW!")
-    else:
+    else:                      # recursive step- calls itself
         print (n)
         countdownr(n-1)
         
         
-countdownr(0)
+countdownr(5)
