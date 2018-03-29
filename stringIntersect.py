@@ -2,13 +2,12 @@
 #3/28/18
 #stringIntersect.py - prints the letters appearing in both of two words
 
-def stringUnion(word1,word2):
-    twoword=(word1+word2)
+def stringIntersect(word1,word2):
     newword=("")
-    for ch in twoword:
-        if ch.lower() not in newword.lower():
+    for ch in word1:
+        if ch.lower()in word2:
             newword +=(ch.lower())
     return(newword)
             
             
-print(stringUnion("Mississippi","Pensylvania"))
+print(stringIntersect("Mississippi","Pensylvania"))
