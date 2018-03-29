@@ -4,7 +4,7 @@
 
 
 def stringUnion(word1,word2):
-    twoword=("word1"+"word2")
+    twoword=(word1+word2)
     newword=("")
     for ch in twoword:
         if ch not in newword:
